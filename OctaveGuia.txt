@@ -1,0 +1,75 @@
+Octave
+
+Negación: ~
+Cambiar la cabecera: PS('>> ')
+; al final de una instrucción no imprime resultado
+disp(var): solo su contenido
+disp(sprintf('text %0.6f', var)): 6 decimales
+format short: 4 decimales, format long: varios
+matriz: [fila1;fila2]
+vector: [n1, n2, n3]
+1:0.1:2 :1.1 , 1.2, ..., 2
+ones(x,y): matriz de 1
+zeros(x,y): matriz de 0
+rand(x,y): matriz de randoms de 0 a 1
+eye(x): matriz diagonal
+size(A): vector de distancias, size(A, 1): filas, size(A, 2): columnas 
+length(A): filas
+pwd: directorio
+ls, cd
+load fichero = load ('fichero')
+who: variables actuales
+whos: vista detallada de las variables
+clear variable: elimina esa variable, clear: borra todo
+var(i:j): los elementos de i a j
+save fichero var -ascii: guarda la variable en el fichero
+A(x,y): valor en fila x columna y
+A(:,x): x columna
+A(x,:): x fila
+A([x,y], :) filas x e y
+Se puede reasignar valores a A
+[A, [n;n;..n;]] = union matriz
+A(:): imprime todos los elementos en columna
+[A B]: concatena
+A .* B: multiplica elemento a elemento
+log(A), exp(A), abs(A), max(A)
+A': traspuesta
+[val, ind] = max(A)
+[f,c] = find(Exp)
+magic(N): suma filas es igual
+floor(A): redondea hacia abajo
+ceil(A): redondea hacia arriba
+calcular la diagonal: A .* eye(n)
+flipud(A): gira la diagonal
+pinv(A): inversa de A
+plot on; mantiene la gráfica para poder hacer plot encima --> plot(x,y, 'color') --> close 
+xlabel('etiq'), ylabel('etiq'), legend('etiq1', 'etiq2', ..., 'etiqn'), title('titulo')
+print -dpng 'name.png'
+figure(n); plot(x,y); para tener varios abiertos
+subplot(1,2,1); crea un espacio para un plot
+axis([x X y Y]) cambia los límites de los ejes
+imagesc(A) tabla de colores
+imagesc(A), colorbar, colormap gray; con escala de grises
+
+if exp,
+	inst;
+elsif exp,
+	inst;
+end;
+
+while exp,
+	inst;
+end;
+
+for i=x:y,
+	inst;
+end;
+
+function [y1, y2] = nameFuction(x)
+
+y1 = x^2;
+y2 = x^3;
+
+devuelve y con parámetro x
+Se puede guardar en un fichero y para importarla basta con cambiar el pwd donde este el 
+fichero o añadirlo al path(addpath('ruta'))
